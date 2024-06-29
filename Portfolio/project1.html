@@ -181,27 +181,34 @@
         let display = document.getElementById('result');
         let expression = '';
     
-        function disFun(value) {
+        function disFun(value) 
+        {
             expression += value;
             display.innerText = expression;
         }
     
-        function clrDis() {
+        function clrDis() 
+        {
             expression = '';
             display.innerText = '0';
         }
     
-        function calFun() {
-            try {
+        function calFun() 
+        {
+            try 
+            {
                 const result = eval(expression);
                 display.innerText = result;
                 expression = result.toString();
-            } catch (error) {
+            } 
+            catch (error) 
+            {
                 display.innerText = 'Error';
             }
         }
     
-        function delFun() {
+        function delFun() 
+        {
             expression = expression.slice(0, -1);
             display.innerText = expression || '0';
         }
